@@ -1,36 +1,272 @@
-Datenschutzerklärung
-1. Verantwortliche Stelle
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung - N GTD APP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-Verantwortlich für die Datenverarbeitung im Rahmen dieser App ist:
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-[N GTD APP]
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-E-Mail: [newgtdapp@gmail.com]
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: float 20s linear infinite;
+        }
 
-2. Erfassung von Daten
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-20px, -20px); }
+        }
 
-Wir erfassen personenbezogene Daten nur, wenn Sie uns diese freiwillig zur Verfügung stellen, zum Beispiel wenn Sie ein Benutzerkonto anlegen oder uns über die App kontaktieren. Die Art der von uns erfassten Daten kann je nach Funktion der App variieren. Dies kann Daten wie Ihren Namen, Ihre E-Mail-Adresse oder andere Informationen umfassen, die für die Nutzung der App erforderlich sind.
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
 
-3. Zweck der Datennutzung
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
 
-Wir verwenden die erfassten Daten, um:
+        .content {
+            padding: 40px;
+        }
 
-Ihnen die Nutzung der App und ihrer Funktionen zu ermöglichen.
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-radius: 15px;
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
 
-Mit Ihnen zu kommunizieren, wenn Sie uns kontaktieren oder Support benötigen.
+        .section:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+        }
 
-Die App zu verbessern und neue Funktionen zu entwickeln.
+        .section h2 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
 
-4. Weitergabe von Daten
+        .section h2::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
 
-Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben oder Sie haben uns ausdrücklich Ihre Einwilligung dazu gegeben. Gegebenenfalls können wir Daten mit Dienstleistern teilen, die uns bei der Bereitstellung der App unterstützen (z.B. Hosting-Anbieter). Diese Dienstleister sind vertraglich verpflichtet, Ihre Daten vertraulich zu behandeln und nur für die vereinbarten Zwecke zu verwenden.
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
 
-5. Ihre Rechte
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
 
-Sie haben jederzeit das Recht, Auskunft über Ihre in der App gespeicherten Daten zu erhalten. Sie können auch die Berichtigung, Sperrung oder Löschung dieser Daten verlangen. Bitte kontaktieren Sie uns dazu unter der oben genannten E-Mail-Adresse.
+        .section li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
 
-6. Änderungen dieser Datenschutzerklärung
+        .section li::before {
+            content: '→';
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
 
-Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Änderungen treten in Kraft, sobald sie in der App oder auf einer zugehörigen Website veröffentlicht werden. Wir empfehlen Ihnen, die Datenschutzerklärung regelmäßig zu überprüfen, um über mögliche Änderungen informiert zu bleiben.
+        .highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #e8f4f8, #d6e9f0);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-info .app-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .contact-info .email {
+            color: #555;
+            font-family: 'Courier New', monospace;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            display: inline-block;
+            border: 1px solid #ddd;
+        }
+
+        .footer {
+            background: #f8f9ff;
+            padding: 25px 40px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section {
+                padding: 20px;
+                margin-bottom: 25px;
+            }
+            
+            .footer {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Datenschutzerklärung</h1>
+            <div class="subtitle">Ihre Privatsphäre ist uns wichtig</div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>1. Verantwortliche Stelle</h2>
+                <p>Verantwortlich für die Datenverarbeitung im Rahmen dieser App ist:</p>
+                <div class="contact-info">
+                    <div class="app-name">N GTD APP</div>
+                    <div class="email">newgtdapp@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>2. Erfassung von Daten</h2>
+                <p>Wir erfassen personenbezogene Daten nur, wenn Sie uns diese <span class="highlight">freiwillig zur Verfügung stellen</span>, zum Beispiel wenn Sie ein Benutzerkonto anlegen oder uns über die App kontaktieren. Die Art der von uns erfassten Daten kann je nach Funktion der App variieren. Dies kann Daten wie Ihren Namen, Ihre E-Mail-Adresse oder andere Informationen umfassen, die für die Nutzung der App erforderlich sind.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. Zweck der Datennutzung</h2>
+                <p>Wir verwenden die erfassten Daten, um:</p>
+                <ul>
+                    <li>Ihnen die Nutzung der App und ihrer Funktionen zu ermöglichen.</li>
+                    <li>Mit Ihnen zu kommunizieren, wenn Sie uns kontaktieren oder Support benötigen.</li>
+                    <li>Die App zu verbessern und neue Funktionen zu entwickeln.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. Weitergabe von Daten</h2>
+                <p>Wir geben Ihre personenbezogenen Daten <span class="highlight">nicht an Dritte weiter</span>, es sei denn, dies ist gesetzlich vorgeschrieben oder Sie haben uns ausdrücklich Ihre Einwilligung dazu gegeben. Gegebenenfalls können wir Daten mit Dienstleistern teilen, die uns bei der Bereitstellung der App unterstützen (z.B. Hosting-Anbieter). Diese Dienstleister sind vertraglich verpflichtet, Ihre Daten vertraulich zu behandeln und nur für die vereinbarten Zwecke zu verwenden.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Ihre Rechte</h2>
+                <p>Sie haben jederzeit das Recht, <span class="highlight">Auskunft über Ihre in der App gespeicherten Daten</span> zu erhalten. Sie können auch die Berichtigung, Sperrung oder Löschung dieser Daten verlangen. Bitte kontaktieren Sie uns dazu unter der oben genannten E-Mail-Adresse.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. Änderungen dieser Datenschutzerklärung</h2>
+                <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Änderungen treten in Kraft, sobald sie in der App oder auf einer zugehörigen Website veröffentlicht werden. Wir empfehlen Ihnen, die Datenschutzerklärung regelmäßig zu überprüfen, um über mögliche Änderungen informiert zu bleiben.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2025 N GTD APP - Alle Rechte vorbehalten
+        </div>
+    </div>
+</body>
+</html>
